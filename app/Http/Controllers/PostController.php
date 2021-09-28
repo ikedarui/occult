@@ -11,4 +11,8 @@ class PostController extends Controller
     {
         return view('posts.new');
     }
+    public function create(Request $request)
+    {
+        return redirect('posts.new');
+    }
 }
