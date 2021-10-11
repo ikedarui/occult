@@ -1,0 +1,37 @@
+body {
+  background-color: #C2EEFF;
+  color: #000;
+}
+
+.header {
+  .logo {
+      width: 120px;
+      height: 82px;
+  }
+}
+
+.posts {
+  .post {
+    .update {
+      font-size: 1.2em;
+      color: #999999;
+    }
+    
+    .title {
+      font-size: 2.0em;
+      font-weight: bold;
+    }
+    
+    .date {
+      font-size: 1.5em;
+    }
+    
+    .prefecture_id {
+      font-size: 1.5em;
+    }
+    
+    .body {
+      font-size: 1.5em;
+    }
+  }
+}

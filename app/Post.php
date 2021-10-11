@@ -14,4 +14,9 @@ class Post extends Model
         'body'  => 'required',
         'prefecture_id' => 'required'
     );
+
+    public function prefecture()
+    {
+        return $this->belongsTo('App\Prefecture');
+    }
 }

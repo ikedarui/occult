@@ -6,27 +6,24 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Post;
+use App\Prefecture;
 
 class PostController extends Controller
 {
-    public function add()
+    public function index(Request $request)
     {
-        return view('posts.new');
-    }
-    public function create(Request $request)
-    {
-        $this->validate($request, Post::$rules);
+        $posts = Post::all()->sortByDesc('updated_at');
         
-        $post = new Post;
-        $form = $request->all();
+        $cond_title = $request->cond_title;
         
-        unset($form['_token']);
-        unset($form['image']);
-        
-        $post->fill($form);
-        $post->user_id = auth()->id();
-        $post->save();
-        
-        return redirect('posts.new');
+        if ($cond_title != '') {
+            $prefecture = Prefecture::where('name', $cond_title)->first();
+            if (isset($prefecture)) {
+                $posts = $prefecture->posts;
+            }
+        }
+        // posts/index.blade.php ファイルを渡している
+        // また View テンプレートに posts、という変数を渡している
+        return view('posts.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 }

@@ -49810,6 +49810,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/front.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/front.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/new.scss":
 /*!*********************************!*\
   !*** ./resources/sass/new.scss ***!
@@ -49822,15 +49833,16 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/new.scss ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/new.scss ./resources/sass/front.scss ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/ec2-user/environment/occult/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /home/ec2-user/environment/occult/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /home/ec2-user/environment/occult/resources/sass/new.scss */"./resources/sass/new.scss");
+__webpack_require__(/*! /home/ec2-user/environment/occult/resources/sass/new.scss */"./resources/sass/new.scss");
+module.exports = __webpack_require__(/*! /home/ec2-user/environment/occult/resources/sass/front.scss */"./resources/sass/front.scss");
 
 
 /***/ })

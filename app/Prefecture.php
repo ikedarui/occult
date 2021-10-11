@@ -22,5 +22,10 @@ class Prefecture extends Model
         }
         return $list;
     }
+    
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
 
 }

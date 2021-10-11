@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h1>心霊体験投稿画面</h1>
-                <form action="{{ action('PostController@create') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ action('Admin\PostController@create') }}" method="post" enctype="multipart/form-data">
                     
                     @if (count($errors) > 0)
                         <ul>
@@ -33,7 +33,7 @@
                     <div class="form-group row">
                         <lavel class="col-md-2">都道府県</lavel>
                         <div class="col-md-10">
-                            {{ Form::select('prefecture_id', App\Prefecture::selectlist(), old('prefecture_id'), ['class' => 'form-control', 'id' => 'prefecture_id', 'required' => 'required']) }}
+                            {{ Form::select('prefecture_id', App\Prefecture::selectlist(), old('prefecture_id'), ['class' => 'form-control', 'id' => '', 'required' => 'required']) }}
                         </div>
                     </div>
                     <div class="form-group row">
