@@ -30,3 +30,7 @@ body {
   font-size: 1.5em;
 }
 
+.posts .post .active {
+  display: block !important;
+}
+

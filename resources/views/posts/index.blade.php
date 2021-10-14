@@ -27,7 +27,7 @@
         <hr color="#c0c0c0">
         <div class="row">
             <div class="posts col-md-12 mx-auto mt-3">
-                @foreach($posts as $post)
+                @foreach($posts as $index => $post)
                     <div class="post">
                         <div class="row">
                             <div class="text col-md-6">
@@ -43,9 +43,10 @@
                                 <div class="prefecture_id">
                                     {{ str_limit($post->prefecture->name, 150) }}
                                 </div>
-                                <div class="body mt-3">
+                                <div class="body mt-3" id="body-{{$post->id}}" style="display: none;">
                                     {{ str_limit($post->body, 1500) }}
                                 </div>
+                                    <button class="switch_btn" data-id="{{$post->id}}">詳細</button>
                             </div>
                         </div>
                     </div>
@@ -55,4 +56,5 @@
         </div>
     </div>
     </div>
+    <script src="{{ secure_asset('js/front.js') }}" defer></script>
 @endsection
