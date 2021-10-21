@@ -56,5 +56,4 @@
         </div>
     </div>
     </div>
-    <script src="{{ secure_asset('js/front.js') }}" defer></script>
 @endsection
