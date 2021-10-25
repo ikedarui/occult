@@ -6,29 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Post;
+use App\User;
 
 class PostController extends Controller
 {
-    public function add()
-    {
-        return view('posts.new');
-    }
-    public function create(Request $request)
-    {
-        $this->validate($request, Post::$rules);
-        
-        $post = new Post;
-        $form = $request->all();
-        
-        unset($form['_token']);
-        unset($form['image']);
-        
-        $post->fill($form);
-        $post->user_id = auth()->id();
-        $post->save();
-        
-        return redirect('posts.new');
-    }
     public function index(Request $request)
     {
         $cond_title = $request->cond_title;
@@ -47,4 +28,21 @@ class PostController extends Controller
         return redirect('admin/posts/');
     }
     
+    public function user(Request $request)
+    {
+        $cond_name = $request->cond_name;
+        if ($cond_name != '') {
+            $users = User::where('name', $cond_name)->get();
+        } else {
+            $users = User::all();
+        }
+        return view('admin.users.index',['users' => $users, 'cond_name' => $cond_name]);
+    }
+    
+    public function delete2(Request $request)
+    {
+        $users = User::find($request->id);
+        $users->delete();
+        return redirect('admin/user/');
+    }
 }

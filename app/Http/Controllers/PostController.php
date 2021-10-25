@@ -10,6 +10,26 @@ use App\Prefecture;
 
 class PostController extends Controller
 {
+    public function add()
+    {
+        return view('posts.new');
+    }
+    public function create(Request $request)
+    {
+        $this->validate($request, Post::$rules);
+        
+        $post = new Post;
+        $form = $request->all();
+        
+        unset($form['_token']);
+        unset($form['image']);
+        
+        $post->fill($form);
+        $post->user_id = auth()->id();
+        $post->save();
+        
+        return redirect('posts/');
+    }
     public function index(Request $request)
     {
         $posts = Post::all()->sortByDesc('updated_at');

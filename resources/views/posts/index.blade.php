@@ -3,15 +3,18 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="posts col-md-12 mx-auto mt-2">
-            <h1>恐怖投稿</h1>
+            <div class="posts col-md-10 mx-auto mt-2">
+                <h1>恐怖投稿</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-2 mx-auto mt-4">
+                <a href="{{ action('PostController@add') }}" role="button" class="btn btn-primary">新規作成</a>
+            </div>
+            <div class="col-md-8 mx-auto mt-4">
                 <form action="{{ action('PostController@index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-2">都道府県</label>
+                        <label class="col-md-1.5">都道府県</label>
                         <div class="col-md-8">
                             <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                         </div>

@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h1>心霊体験投稿画面</h1>
-                <form action="{{ action('Admin\PostController@create') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ action('PostController@create') }}" method="post" enctype="multipart/form-data">
                     
                     @if (count($errors) > 0)
                         <ul>
