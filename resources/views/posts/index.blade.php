@@ -49,8 +49,11 @@
                                 <div class="body mt-3" id="body-{{$post->id}}" style="display: none;">
                                     {{ str_limit($post->body, 1500) }}
                                 </div>
-                                    <button class="switch_btn" data-id="{{$post->id}}">詳細</button>
+                                <button class="switch_btn" data-id="{{$post->id}}">詳細</button>
                             </div>
+                            @if($post->user_id == Auth::id())
+                                <a href="{{ action('PostController@edit', ['id' => $post->id]) }}">編集</a>
+                            @endif
                         </div>
                     </div>
                     <hr color="#c0c0c0">

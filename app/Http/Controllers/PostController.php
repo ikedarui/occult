@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 use App\Post;
 use App\Prefecture;
@@ -45,5 +46,36 @@ class PostController extends Controller
         // posts/index.blade.php ファイルを渡している
         // また View テンプレートに posts、という変数を渡している
         return view('posts.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+    }
+    
+    public function edit(Request $request)
+    {
+        $post = Post::find($request->id);
+        if (empty($post)) {
+            abort(404);
+        }
+        
+        $user = Auth::user();
+        if ($user->id != $post->user_id) {
+            $posts = Post::all()->sortByDesc('updated_at');
+            $cond_title = "";
+            return view('posts.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        }
+        
+        return view('posts.edit', ['post_form' => $post]);
+    }
+    
+    public function update(Request $request)
+    {
+        $this->validate($request, Post::$rules);
+        $post = Post::find($request->id);
+        $post_form = $request->all();
+        
+        unset($post_form['_token']);
+        unset($post_form['_remove']);
+        
+        $post->fill($post_form)->save();
+        
+        return redirect('posts/');
     }
 }
