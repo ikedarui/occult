@@ -19,7 +19,7 @@
   font-size: 5em;/*サイズ2倍*/
   font-family :Quicksand, sans-serif;/*Google Font*/
   top: 10%;
-  left: 10%;
+  left: 7%;
 }
 
 ul {
@@ -28,9 +28,9 @@ ul {
 
 .navigation{
   position: absolute;
-  top: 70%;
+  top: 71%;
   bottom: 15%;
-  width: 1300px;
+  width: 1200px;
   background: #999;
 }
 
@@ -42,7 +42,7 @@ ul {
 .momo {/*aタグを画像の真ん中に*/
   position: absolute;
   top: 70%;
-  left: 25%;
+  left: 10%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -60,7 +60,7 @@ ul {
 .inu {/*aタグを画像の真ん中に*/
   position: absolute;
   top: 70%;
-  left: 40%;
+  left: 22%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -79,7 +79,7 @@ ul {
 .saru {/*aタグを画像の真ん中に*/
   position: absolute;
   top: 70%;
-  left: 60%;
+  left: 41%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -97,7 +97,7 @@ ul {
 .kizi {/*aタグを画像の真ん中に*/
   position: absolute;
   top: 70%;
-  left: 82%;
+  left: 62%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);

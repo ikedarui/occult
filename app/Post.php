@@ -19,4 +19,14 @@ class Post extends Model
     {
         return $this->belongsTo('App\Prefecture');
     }
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+    
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }

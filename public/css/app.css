@@ -10942,3 +10942,141 @@ a.text-dark:focus {
   }
 }
 
+.example {
+  /*親div*/
+  position: relative;
+  /*相対配置*/
+}
+
+.example p {
+  position: absolute;
+  color: white;
+  /*文字は白に*/
+  font-weight: bold;
+  /*太字に*/
+  font-size: 5em;
+  /*サイズ2倍*/
+  font-family: Quicksand, sans-serif;
+  /*Google Font*/
+  top: 10%;
+  left: 7%;
+}
+
+ul {
+  list-style: none;
+}
+
+.navigation {
+  position: absolute;
+  top: 71%;
+  bottom: 15%;
+  width: 1200px;
+  background: #999;
+}
+
+.example a {
+  color: white;
+  text-decoration: none;
+  /*下線を表示させない*/
+}
+
+.momo {
+  /*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  margin: 0;
+  /*余計な隙間を除く*/
+  font-size: 35px;
+  /*文字サイズ*/
+  border: solid white 2px;
+  /*線で囲う*/
+  padding: 7px;
+  /*文字と線の間の余白*/
+  color: white;
+  /*文字色*/
+}
+
+.momo:hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
+}
+
+.inu {
+  /*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 70%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  margin: 0;
+  /*余計な隙間を除く*/
+  font-size: 35px;
+  /*文字サイズ*/
+  border: solid white 2px;
+  /*線で囲う*/
+  padding: 7px;
+  /*文字と線の間の余白*/
+  color: white;
+  /*文字色*/
+}
+
+.inu:hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
+}
+
+.saru {
+  /*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 70%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  margin: 0;
+  /*余計な隙間を除く*/
+  font-size: 35px;
+  /*文字サイズ*/
+  border: solid white 2px;
+  /*線で囲う*/
+  padding: 7px;
+  /*文字と線の間の余白*/
+  color: white;
+  /*文字色*/
+}
+
+.saru:hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
+}
+
+.kizi {
+  /*aタグを画像の真ん中に*/
+  position: absolute;
+  top: 70%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  margin: 0;
+  /*余計な隙間を除く*/
+  font-size: 35px;
+  /*文字サイズ*/
+  border: solid white 2px;
+  /*線で囲う*/
+  padding: 7px;
+  /*文字と線の間の余白*/
+  color: white;
+  /*文字色*/
+}
+
+.kizi:hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
+}
+

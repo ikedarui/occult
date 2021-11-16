@@ -12,6 +12,8 @@ class PostController extends Controller
 {
     public function index(Request $request)
     {
+        $posts = Post::all()->sortByDesc('updated_at');
+
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
             $posts = Post::where('title', $cond_title)->get();

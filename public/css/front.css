@@ -1,5 +1,5 @@
 body {
-  background-color: #C2EEFF;
+  background-color: #666666;
   color: #000;
 }
 
@@ -14,20 +14,20 @@ body {
 }
 
 .posts .post .title {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bold;
 }
 
 .posts .post .date {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .posts .post .prefecture_id {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .posts .post .body {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .posts .post .active {

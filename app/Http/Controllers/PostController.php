@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Post;
 use App\Prefecture;
+use App\Comment;
 
 class PostController extends Controller
 {
@@ -34,7 +35,6 @@ class PostController extends Controller
     public function index(Request $request)
     {
         $posts = Post::all()->sortByDesc('updated_at');
-        
         $cond_title = $request->cond_title;
         
         if ($cond_title != '') {
@@ -43,9 +43,13 @@ class PostController extends Controller
                 $posts = $prefecture->posts;
             }
         }
+        
+        $comment = new Comment;
+        $post = Post::find('id');
+            
         // posts/index.blade.php ファイルを渡している
         // また View テンプレートに posts、という変数を渡している
-        return view('posts.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('posts.index', ['posts' => $posts, 'cond_title' => $cond_title, 'comment' => $comment]);
     }
     
     public function edit(Request $request)

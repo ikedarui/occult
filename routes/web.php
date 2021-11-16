@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('posts/new','PostController@add');
 Route::post('posts/new','PostController@create');
 Route::get('posts','PostController@index');
+Route::post('posts', 'CommentsController@store');
 Route::get('posts/edit', 'PostController@edit');
 Route::post('posts/edit', 'PostController@update');
 Route::get('posts/delete','Admin\PostController@delete');

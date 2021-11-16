@@ -16,6 +16,7 @@
          {{-- Laravel標準で用意されているJavascriptを読み込みます --}}
         <script src="{{ secure_asset('js/app.js') }}" defer></script>
         <script src="{{ secure_asset('js/front.js') }}" defer></script>
+        <script src="{{ secure_asset('js/comment.js') }}" defer></script>
         
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">

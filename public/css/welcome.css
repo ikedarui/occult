@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  /*相対配置*/
+}
+
+.title {
+  position: absolute;
+  color: white;
+  /*文字は白に*/
+  font-weight: bold;
+  /*太字に*/
+  font-size: 6em;
+  /*サイズ2倍*/
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  /*文字の装飾は省略*/
+}
+
+ul {
+  list-style: none;
+}
+
+.content a {
+  color: black;
+  text-decoration: none;
+  /*下線を表示させない*/
+}
+
+.negitama {
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  font-size: 40px;
+  /*文字サイズ*/
+  border: solid white 2px;
+  /*線で囲う*/
+  padding: 10px;
+  /*文字と線の間の余白*/
+  color: black;
+  /*文字色*/
+  background-color: #ccccff;
+  margin: 50px 20px;
+}
+
+.negitama:hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
+}
+
+.ti-gyu {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  font-size: 40px;
+  /*文字サイズ*/
+  border: solid white 2px;
+  /*線で囲う*/
+  padding: 10px;
+  /*文字と線の間の余白*/
+  color: white;
+  /*文字色*/
+  background-color: #ccccff;
+  margin: 50px 20px;
+}
+
+.ti-gyu:hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
+}
+
+.okura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*以下装飾*/
+  font-size: 40px;
+  /*文字サイズ*/
+  border: solid white 2px;
+  /*線で囲う*/
+  padding: 10px;
+  /*文字と線の間の余白*/
+  color: white;
+  /*文字色*/
+  background-color: #ccccff;
+  margin: 50px 20px;
+}
+
+.okura:hover {
+  /*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);
+  /*背景を半透明に*/
+}
+
+.copyright {
+  color: #777;
+  text-align: center;
+}
+
