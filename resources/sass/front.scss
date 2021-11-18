@@ -12,9 +12,8 @@ body {
 
 .posts {
   .post {
-    .update {
-      font-size: 1.2em;
-      color: #999999;
+    .aa {
+      font-size: 25px;
     }
     
     .title {
@@ -22,17 +21,23 @@ body {
       font-weight: bold;
     }
     
-    .date {
-      font-size: 2em;
+    .update {
+      font-size: 1.2em;
+      color: #999999;
     }
     
     .prefecture_id {
       font-size: 2em;
     }
     
+    .date {
+      font-size: 2em;
+    }
+    
     .body {
       font-size: 2em;
     }
+    
     .active {
       display: block !important;
     }

@@ -29,17 +29,17 @@
                     </div>
                     <div class="i">
                         <div class="form-group row">
-                            <lavel class="col-md-4">日付</lavel>
+                            <lavel class="col-md-4">都道府県</lavel>
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="date" value="{{ old('date') }}">
+                                {{ Form::select('prefecture_id', App\Prefecture::selectlist(), old('prefecture_id'), ['class' => 'form-control', 'id' => '', 'required' => 'required']) }}
                             </div>
                         </div>
                     </div>
                     <div class="u">
                         <div class="form-group row">
-                            <lavel class="col-md-4">都道府県</lavel>
+                            <lavel class="col-md-4">体験日</lavel>
                             <div class="col-md-12">
-                                {{ Form::select('prefecture_id', App\Prefecture::selectlist(), old('prefecture_id'), ['class' => 'form-control', 'id' => '', 'required' => 'required']) }}
+                                <input type="text" class="form-control" name="date" value="{{ old('date') }}">
                             </div>
                         </div>
                     </div>

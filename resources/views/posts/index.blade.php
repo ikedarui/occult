@@ -33,18 +33,21 @@
                 @foreach($posts as $index => $post)
                     <div class="post">
                         <div class="row">
-                            <div class="text col-md-2">
-                                <p class="border border-secondary text-center bg-warning">{{ $post->user->name }}</p>
+                            <div class="aa col-md-3 mt-2">
+                                <p class="border border-secondary text-center bg-warning ">名前：{{ $post->user->name }}</p>
                             </div>
-                            <div class="text col-md-9">
+                            <div class="text col-md-8">
                                 <div class="title">
                                     {{ str_limit($post->title, 150) }}
                                 </div>
-                                <div class="date">
-                                    {{ str_limit($post->date, 150) }}
+                                <div class="update">
+                                    {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="prefecture_id">
-                                    {{ str_limit($post->prefecture->name, 150) }}
+                                    場所　{{ str_limit($post->prefecture->name, 150) }}
+                                </div>
+                                <div class="date">
+                                    体験日　{{ str_limit($post->date, 150) }}
                                 </div>
                                 <div class="body mt-2" id="body-{{$post->id}}" style="display: none;">
                                     {{ str_limit($post->body, 1500) }}
@@ -53,13 +56,10 @@
                                 @if($post->user_id == Auth::id())
                                     <a href="{{ action('PostController@edit', ['id' => $post->id]) }}" role="button" class="btn btn-warning">編集</a>
                                 @endif
-                                <div class="update">
-                                    {{ $post->updated_at->format('Y年m月d日') }}
-                                </div>
                                 
                                 @foreach ($post->comments as $comment)
-                                <button class="switch_btn2" data-id="{{$comment->id}}">コメントを見る</button>
-                                <div class="text col-md-3">
+                                <div class="text col-md-4 mt-3">
+                                    <button class="switch_btn2" data-id="{{$comment->id}}">コメントを見る</button>
                                     <div class="comments mt-1" id="comments-{{$comment->id}}" style="display: none;">
                                         <p class="border border-secondary text-center bg-warning">{{ $comment->user->name }}</p>
                                         <div class="comment">

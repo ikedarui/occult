@@ -8,9 +8,8 @@ body {
   height: 82px;
 }
 
-.posts .post .update {
-  font-size: 1.2em;
-  color: #999999;
+.posts .post .aa {
+  font-size: 25px;
 }
 
 .posts .post .title {
@@ -18,11 +17,16 @@ body {
   font-weight: bold;
 }
 
-.posts .post .date {
-  font-size: 2em;
+.posts .post .update {
+  font-size: 1.2em;
+  color: #999999;
 }
 
 .posts .post .prefecture_id {
+  font-size: 2em;
+}
+
+.posts .post .date {
   font-size: 2em;
 }
 
