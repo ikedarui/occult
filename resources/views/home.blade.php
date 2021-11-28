@@ -8,9 +8,9 @@
             <p>オカルトクラブへようこそ。</p>
             <div class="col-md-18">
                 <ul class="navigation">
-                  <li class="momo"><a href="https://3143618c91494ca0a8b3c0cfe26c7a4b.vfs.cloud9.us-east-2.amazonaws.com"/>Top</a></li>
-                  <li class="inu"><a href="https://3143618c91494ca0a8b3c0cfe26c7a4b.vfs.cloud9.us-east-2.amazonaws.com/posts/new">NewPost</a></li>
-                  <li class="saru"><a href="https://3143618c91494ca0a8b3c0cfe26c7a4b.vfs.cloud9.us-east-2.amazonaws.com/posts">みんなの投稿</a></li>
+                  <li class="momo"><a href="/">Top</a></li>
+                  <li class="inu"><a href="{{ action('PostController@add') }}">NewPost</a></li>
+                  <li class="saru"><a href="{{ action('PostController@index') }}">みんなの投稿</a></li>
                   <li class="kizi"><a href="#">お問い合わせ</a></li>
                 </ul>
                 <div class="card">
