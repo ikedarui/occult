@@ -32,6 +32,7 @@ class PostController extends Controller
         
         return redirect('posts/');
     }
+    
     public function index(Request $request)
     {
         $posts = Post::all()->sortByDesc('updated_at');

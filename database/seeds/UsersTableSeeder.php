@@ -13,8 +13,8 @@ class UsersTableSeeder extends Seeder
     {
         //オーナー
         \App\User::create([
-            'name' => '池田琉生',
-            'email' => 'ruisandes@i.softbank.jp',
+            'name' => 'さんま',
+            'email' => 'rui@rui.rui',
             'password' => bcrypt('0000'),
             'role' => 'owner'
         ]);
