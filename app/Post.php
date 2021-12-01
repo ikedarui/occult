@@ -25,6 +25,11 @@ class Post extends Model
         return $this->belongsTo('App\User');
     }
     
+    public function getData()
+    {
+        return $this->id . ': ' . $this->title . ' (' . optional($this->user)->name . ')';
+    }
+    
     public function comments()
     {
         return $this->hasMany('App\Comment');
