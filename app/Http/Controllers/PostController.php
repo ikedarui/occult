@@ -44,13 +44,10 @@ class PostController extends Controller
                 $posts = $prefecture->posts;
             }
         }
-        
-        $comment = new Comment;
-        $post = Post::find('id');
             
         // posts/index.blade.php ファイルを渡している
         // また View テンプレートに posts、という変数を渡している
-        return view('posts.index', ['posts' => $posts, 'cond_title' => $cond_title, 'comment' => $comment]);
+        return view('posts.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
     
     public function edit(Request $request)
