@@ -62,7 +62,7 @@
                                 @endif
                                 
                                 @foreach ($post->comments as $comment)
-                                <div class="text col-md-6 mt-3">
+                                <div class="text col-md-8 mt-3">
                                     <button class="switch_btn2" data-id="{{$comment->id}}">コメントを見る</button>
                                     <div class="comments mt-1" id="comments-{{$comment->id}}" style="display: none;">
                                         <p class="border border-secondary text-center bg-warning">{{ $comment->user->name }}</p>
