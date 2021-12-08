@@ -13,7 +13,7 @@ body {
 }
 
 .posts .post .title {
-  font-size: 3em;
+  font-size: 2.1em;
   font-weight: bold;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .posts .post .body {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .posts .post .active {
