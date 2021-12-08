@@ -43,10 +43,10 @@
                             </div>
                             <div class="text col-md-4">
                                 <div class="prefecture_id">
-                                    場所 {{ str_limit($post->prefecture->name, 150) }}
+                                    場所　{{ str_limit($post->prefecture->name, 150) }}
                                 </div>
                                 <div class="date">
-                                    体験日 {{ str_limit($post->date, 150) }}
+                                    体験日　{{ str_limit($post->date, 100) }}
                                 </div>
                                 <div class="aa col-md-6.5 mt-2">
                                     <p class="border border-secondary text-center bg-warning ">名前：{{ $post->user->name }}</p>
@@ -79,7 +79,7 @@
                                                 <div class="col-md-8">
                                                     コメント<input type="text" class="form-control" name="comment" value="{{ old('comment') }}">
                                                 </div>
-                                                <div class="col-md-1 mt-4">
+                                                <div class="col-md-3 mt-4">
                                                     <input type="hidden" name="post_id" value="{{ $post->id }}">
                                                     {{ csrf_field() }}
                                                     <input type="submit" class="btn btn-primary" value="コメントする">
