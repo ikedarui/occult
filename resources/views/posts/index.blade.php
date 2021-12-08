@@ -46,7 +46,7 @@
                                     場所　{{ str_limit($post->prefecture->name, 150) }}
                                 </div>
                                 <div class="date">
-                                    体験日　{{ str_limit($post->date, 100) }}
+                                    体験日　{{ str_limit($post->date, 150) }}
                                 </div>
                                 <div class="aa col-md-6.5 mt-2">
                                     <p class="border border-secondary text-center bg-warning ">名前：{{ $post->user->name }}</p>
