@@ -5,7 +5,7 @@
 
 
 @section('content')
-<img src="https://dochub.com/ruisandes0118/EB5r38Awl8QMkm8wXzZ1kD/image-18-png" width="1800" height="980" alt="怪しい風景">
+<img src="{{ asset('images/onga.png')}}" width="1800" height="980" alt="怪しい風景">
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto">
